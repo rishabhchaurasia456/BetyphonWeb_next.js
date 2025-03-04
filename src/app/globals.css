@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/* 
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -18,4 +18,78 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+} */
+
+/*nav-bar btn*/
+.nav-btn{
+  position: relative;
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 18px;
+  color: rgb(8, 8, 8);
+  background-color: rgba(0, 0, 0, 0); /* Button background */
+  border: 1px solid #30e3e9; /* Default border color */
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0);
 }
+
+.nav-btn:hover{
+  box-shadow: inset 200px 0px 0px 0px #30e3e9;
+  color:#FFF;
+  transition: all 600ms ease 0ms;
+}
+
+.hero{
+  background:linear-gradient(45deg, #13B9CE, #008cff);;
+  z-index: -1;
+}
+
+.hero-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg::before {
+  content: "";
+  position: absolute;
+  top: -6%;
+  left: 0%;
+    width: 692px;
+    height: 692px;
+  background-image: url('../../public/images/pattern-2.png');
+  background-size: 90%;
+  background-position: left;
+  background-repeat: no-repeat;
+  animation: spinBg 20s linear infinite;
+  z-index: -1;
+}
+
+@keyframes spinBg {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(180deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/*hero*/
+
+.hero-btn{
+  position: relative;
+  display: inline-block;
+ 
+  font-size: 18px;
+  color: #fafafa;
+  background-color: rgba(0, 0, 0, 0); /* Button background */
+  border: 1px solid #30e3e9; /* Default border color */
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.hero-btn:hover{
+  background-color: rgb(250, 250, 250);
+  color:#27c6db;
+  transition: all 600ms ease 0ms;
+}
+             /* All sides red */
+
